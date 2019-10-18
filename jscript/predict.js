@@ -6,6 +6,7 @@
 // After the model loads we want to make a prediction on the default image.
 // Thus, the user will see predictions when the page is first loaded.
 
+var predictionArray = []; //array to contain all possible prediction
 function simulateClick(tabID) {
 	
 	document.getElementById(tabID).click();
@@ -45,8 +46,8 @@ $("#image-selector").change(function () {
 let model;
 (async function () {
 	
-	model = await tf.loadModel('http://dr.test.woza.work/model_dr_2/model.json');
-	$("#selected-image").attr("src", "http://dr.test.woza.work/assets/fundus_1.jpg")
+	model = await tf.loadModel('http://localhost/model_dr_2/model.json');
+	$("#selected-image").attr("src", "http://localhost/assets/fundus_1.jpg")
 	
 	console.log('model_dr_2');
 	
@@ -109,10 +110,21 @@ top5.forEach(function (p) {
 
 	// set the number of decimal places in the prediction here
 	$("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(3)}</li>`);
-
+    predictionArray.push({
+      key: p.className,
+      value: p.probability
+    });
 	
-	});
-	
+	}
+	);
+	$.ajax({
+    url: "newpage.php",
+    method: "post",
+    data: { pred: JSON.stringify(predictionArray) },
+    success: function(res) {
+      console.log(res);
+    }
+  });
 	
 });
 
