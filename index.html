@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <meta charset="utf-8">
-<title>DR Analyzer</title>
+<title>Pneumonic X-Ray Analyzer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use the power of Machine Learning to diagnose diabetic reinopathy on fundus images.">
+<meta name="description" content="Use the power of Machine Learning to diagnose pneumonic x-ray images.">
 
 
 <!--Code to prevent the browser from caching the page-->
@@ -59,10 +60,13 @@ and is wrapped around the whole page content. -->
 <!-- Header -->
 <div class="w3-center title adjust-fontcolor logo">
 	
-  <h1 class="space-letters w3-text-purple"><i class="fa fa-plus-square w3-padding" style="font-size:35px;color:red"></i><b>Diabetic Retinopathy<br>Analyzer</b></h1>
+  <h1 class="display-3">Pneumonic X-Ray<br>Analyzer</h1>
+
   
   
-  <h5 class="space-letters tag-font w3-text-red"><b>powered by<br> Artificial Intelligence</b></h5>
+  <p class="lead">
+  <kbd>Powered by TensroflowJS</kbd>
+</p>
 </div>
 
 
@@ -71,7 +75,7 @@ and is wrapped around the whole page content. -->
 <!-- Front page image -->
 <!-- This image will be replaced once the js code runs. -->
 <div class="w3-center">
-	<img id="selected-image" class="w3-round adjust-image" src="assets/fundus_1.jpg" width="300" alt=""> 
+	<img id="selected-image" class="w3-round adjust-image" src="assets/person1_bacteria_1.jpg" width="300" alt=""> 
 </div> 
 
 
@@ -91,7 +95,7 @@ and is wrapped around the whole page content. -->
 <!-- Button -->
 <div id="btnn" class="w3-center bottom-padding">
 	
-	<button class="w3-btn w3-purple w3-round w3-margin-bottom adjust-spacing w3-hover-red btn-font w3-padding w3-space-letters w3-card-4" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)"><i class='fas fa-camera w3-padding-right' style='font-size:15px'></i><b>Submit a Fundus Image</b></button>
+	<button class="w3-btn w3-purple w3-round w3-margin-bottom adjust-spacing w3-hover-red btn-font w3-padding w3-space-letters w3-card-4" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)"><i class='fas fa-camera w3-padding-right' style='font-size:15px'></i><b>Submit an X-Ray Scan</b></button>
 	<p class="w3-text-teal">jpeg or png</p>
 </div> 
 
@@ -102,7 +106,7 @@ and is wrapped around the whole page content. -->
 
 
 <div class='w3-padding'>
-	<p class='w3-round w3-margin w3-margin-bottom w3-text-teal'>Please Note: This is a prototype.</p>
+	<p class='w3-round w3-margin w3-margin-bottom w3-text-teal'>Please Note: This is a prototype to demonstrate the capabilities. In no way should this be used in a production environment.</p>
 </div>
 
 
@@ -143,7 +147,9 @@ and is wrapped around the whole page content. -->
 	
 	
 </div> <!-- w3-content -->
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
 

@@ -47,7 +47,7 @@ let model;
 (async function () {
 	
 	model = await tf.loadModel('http://localhost/model_dr_2/model.json');
-	$("#selected-image").attr("src", "http://localhost/assets/fundus_1.jpg")
+	$("#selected-image").attr("src", "http://localhost/assets/person1_bacteria_1.jpg")
 	
 	console.log('model_dr_2');
 	
