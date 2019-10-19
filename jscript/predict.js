@@ -46,10 +46,10 @@ $("#image-selector").change(function () {
 let model;
 (async function () {
 	
-	model = await tf.loadModel('http://localhost/model_dr_2/model.json');
+	model = await tf.loadModel('http://localhost/final_model_mobilenet/model.json');
 	$("#selected-image").attr("src", "http://localhost/assets/person1_bacteria_1.jpg")
 	
-	console.log('model_dr_2');
+	console.log('final_model_mobilenet');
 	
 	// Hide the model loading spinner
 	$('.progress-bar').hide();
